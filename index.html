@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cálculo do consumo de energia elétrica.</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <header><h1>Cálculo do consumo de energia elétrica.</h1></header>
+    <main>
+        <h2>Como calcular consumo de energia dos aparelhos elétricos?</h2>
+        
+        <p>
+            Para calcular o consumo de energia em kWh de qualquer equipamento elétrico, basta multiplicar a sua potência em Watt (W) pelo tempo de uso em horas (h) e dividir o resultado por 1.000.
+            Exemplo: um aparelho de som de 300W, ligado por 5 horas, irá consumir 1.500W, equivalente a 1,5 kWh.
+            Por lei, todos os equipamentos elétricos devem apresentar a sua potência em suas embalagens e/ou manuais, por isso, basta procurar por esses dados nos seus aparelhos para conseguir calcular o seu consumo de energia.
+            Depois, é só multiplicar esse consumo diário pelos dias do mês para calcular o consumo elétrico mensal do equipamento. Ou seja, em 30 dias, o aparelho de som consumiu 45 kWh.
+            Por fim, para saber o quanto você vai gastar no mês para alimentar esse aparelho, basta multiplicar o seu consumo mensal em kWh pelo valor da tarifa de energia da sua distribuidora, o qual é informado na sua conta de luz.
+            Veja abaixo como calcular o consumo de energia dos principais aparelhos da sua casa ou empresa.
+        </p>
+
+
+        <h2>Aprenda como calcular o gasto de energia do chuveiro elétrico:</h2>
+
+        <p>
+            Chuveiro elétrico
+            Os chuveiros elétricos apresentam potências de operação diferentes para cada nível de temperatura, isto é, modo inverno e modo verão.
+            Portanto, o primeiro passo para calcular o consumo de energia é analisar a ficha técnica do seu chuveiro elétrico para saber qual a potência de operação em cada modo de temperatura.
+            Depois, com base na temperatura que você utiliza, basta multiplicar a potência do chuveiro pelo seu tempo de uso diário, em horas.
+        </p>
+        <p>
+            Exemplo: 
+            Chuveiro com potência de 4.500 watts, utilizado 30 minutos (0,5 hora) por dia, durante os 30 dias do mês:
+            (4.500) x (0,5 x 30)/1.000 = 67,5 kWh 
+            Supondo que você pague uma tarifa de R$0,80 pelo kWh, o seu gasto mensal apenas com o chuveiro seria de R$ 54, sem contar os acréscimos da despesa de energia. 
+        </p>
+
+        <h2>Para facilitar o Cálculo, abaixo temos uma cálculadora para você calcular os gastos dos equipamentos elétricos.</h2>
+
+        <div id="calculadora">
+            <h2>Cálculo de energia elétrica por hora:</h2>
+            <label for="pot">Potencia(w):</label>
+            <input type="number" name="pot" id="pot"><br>
+            <label for="temp">Horas por dia:</label>
+            <input type="number" name="temp" id="temp" min="0" max="24" placeholder="0 a 24"><br>
+            <label for="dia">Dias de consumo:</label>
+            <input type="number" name="dia" id="dia" min="1" max="31" placeholder="1 a 31"><br>
+            <label for="tarif">Tarifas de energia elétrica:</label>
+            <input type="number" name="tarif" id="tarif" step="0.01" placeholder="0,00"><br>
+            <input type="button" value="Calcular" onclick="calcular()">
+            
+            <div id="kwh">O consumo de quilowatt hora (kwh) é de:</div>
+            <div id="res">O valor à pagar será de:</div>
+        </div>
+
+        <h2>Potência(w)</h2>
+        <div id="imgpot">
+            <img src="imagens/potencia-chuveiro.jpg" alt="Potencia">
+            <p>
+                Potência elétrica é a medida da quantidade de energia elétrica fornecida ou consumida por um circuito elétrico. Pode ser calculada por meio de grandezas como tensão, corrente e resistência elétrica, e sua unidade de medida é o watt.
+            
+                O cálculo da potência elétrica é de grande importância, uma vez que, por meio dele, é possível determinar qual será a quantidade de energia elétrica consumida por um dispositivo elétrico durante um determinado intervalo de tempo.
+                O que é potência elétrica?
+                Potência elétrica é a quantidade de energia elétrica que é fornecida a um circuito elétrico a cada segundo ou, ainda, a quantidade de energia que esse circuito converte em outras formas de energia, também a cada segundo. A unidade de medida da potência elétrica, de acordo com o Sistema Internacional de Unidades (SI), é o watt (W), que equivale a joules por segundo (J/s).
+            </p>
+        </div>
+        
+
+        <h2>Tarifas</h2>
+        <div id="imgtar">
+            <img src="imagens/CPFL-conta.webp" alt="Conta energia">
+            <p>
+                O Serviço Energia Elétrica é essencial no dia a dia da sociedade, seja nas residências ou nos diversos segmentos da economia. Para o uso desse bem, é necessária a aplicação de tarifas que remunerem o serviço de forma adequada, que viabilizem a estrutura para manter o serviço com qualidade e que criem incentivos para eficiência. Seguindo tais preceitos, a ANEEL desenvolve metodologias de cálculo tarifário para segmentos do setor elétrico (geração, transmissão, distribuição e comercialização), considerando fatores como a infraestrutura de geração, transmissão e distribuição, bem como fatores econômicos de incentivos à modicidade tarifária e sinalização ao mercado.
+                Para estabelecer a tarifa, a ANEEL considera as despesas desde quando a energia é gerada até a sua entrega na unidade consumidora.
+                Assim, para entender a composição da tarifa, é necessário antes entender como o setor elétrico funciona.
+            
+                Como o setor elétrico brasileiro funciona?
+                As geradoras produzem a energia, as transmissoras a transportam do ponto de geração até os centros consumidores, de onde as distribuidoras a levam até a casa dos cidadãos. Há ainda as comercializadoras, empresas autorizadas a comprar e vender energia para os consumidores livres (geralmente consumidores que precisam de maior quantidade de energia).
+            
+                O sistema elétrico brasileiro permite o intercâmbio da energia produzida em todas as regiões, exceto nos sistemas isolados, localizados principalmente na região Norte. O trânsito da energia é possível graças ao Sistema Interligado Nacional (SIN), uma grande rede de transmissão com mais de 100 mil quilômetros (km) de extensão. As localidades do sistema isolado vêm sendo gradativamente interligadas ao longo dos anos, e, atualmente, somente cerca de 2% do mercado nacional permanece no sistema isolado.
+            </p>
+        </div>
+        
+
+        <h2>Quer aprender como economizar energia? Confira 9 dicas eficientes.</h2><hr>
+
+        <div id="lampada"></div>
+
+        <p><hr>
+            1. Invista na iluminação natural
+            Procure explorar as janelas, mantendo as cortinas bem abertas, de modo a garantir a entrada de luz natural nos cômodos.
+            
+            Assim, você evita ter que acender lâmpadas durante o dia, por exemplo.
+            
+            A própria escolha da coloração de paredes e teto influencia. Prefira tons mais claros, pois eles refletem a luz mais facilmente.
+        </p><hr>
+
+        <p>
+            2. Controle a intensidade da luz artificial
+            Sabe aquele cômodo que você não usa muito? Que tal colocar sensores de presença para diminuir o consumo de energia no local?
+            
+            Fazendo isso, as lâmpadas desligarão automaticamente quando não houver ninguém no espaço.
+            
+            Uma alternativa interessante é utilizar um dimmer em alguns interruptores da sua casa. O dimmer é um variador de luminosidade, que permite regular a intensidade da luz e, consequentemente, diminuir o desperdício de energia.
+        </p><hr>
+
+        <p>
+            3. Substitua suas lâmpadas
+            Se você ainda possui lâmpadas fluorescentes ou incandescentes (o que é pior) na sua casa, está parado no tempo. Já passou da hora de substituir esses modelos pelas lâmpadas de LED.
+            
+            Além de representarem uma economia de 80% em relação aos outros dois tipos, elas também duram muito mais, exigindo menos manutenção.
+        </p><hr>
+
+        <p>
+            4. Nada de geladeira próxima ao fogão
+            Mais adiante vamos falar especificamente como economizar energia com a geladeira, mas já deixamos aqui uma dica bônus: ela não deve ficar próxima do fogão.
+            
+            Como há uma diferença de temperatura muito grande entre os dois quando estão operando, é exigida energia em excesso para que ambos funcionem como o esperado.
+            
+            A saída é estudar as opções de espaço disponíveis e tentar posicionar um longe eletrodoméstico do outro.
+        </p><hr>
+
+        <p>
+            5. Cuidado com o modo stand-by
+            Alguns aparelhos, como televisão, micro-ondas, carregador de celular e notebook, por exemplo, continuam consumindo energia mesmo quando desligados.
+            
+            Isso acontece porque eles ficam em modo stand-by, sendo responsável por até 12% do gasto energético de uma residência.
+            
+            Uma dica é evitar carregar o seu celular enquanto você dorme, por exemplo, e recuperar sua bateria somente no tempo necessário para que ela fique cheia.
+        </p><hr>
+
+        <p>
+            6. Tire os aparelhos da tomada
+            Outra saída para acabar com o consumo do modo stand-by é tirar esses aparelhos da tomada enquanto você não estiver usando.
+            
+            É claro que isso não vale para a geladeira, por exemplo, já que ela não pode ficar longos períodos fora da tomada.
+        </p><hr>
+
+        <p>
+            7. Prefira eletrodomésticos mais eficientes
+            A velha máxima do “barato sai caro” vale muito para a relação eletrodoméstico e conta de luz.
+            
+            Optar por modelos mais baratos, mas com menos potência e uma eficiência energética baixa (escala E) é uma demonstração disso.
+            
+            Por isso, antes de comprar preste atenção no selo do Instituto Nacional de Metrologia, Qualidade e Tecnologia (Inmetro) e privilegie os eletrodomésticos A, os de maior eficiência.
+            
+            Na prática, isso significa que eles gastam menos energia.
+        </p><hr>
+
+        <p>
+            8. Use a máquina de lavar com sabedoria
+            A máquina de lavar também pode ser uma vilã da economia de energia. Entre as dicas para o uso mais consciente desse eletrodoméstico, estão:
+            
+            Evitar lavar apenas uma pequena quantidade de roupas, preferindo sempre utilizar os ciclos máximos de uso
+            Dosar o uso de sabão e amaciante para diminuir a necessidade de múltiplos enxágues
+            Reduzir o uso da opção de secagem, caso disponível, pois ela demanda mais energia do aparelho.
+        </p><hr>
+
+        <p>
+            9. Acumule roupas para passar com o ferro elétrico
+            Responsável por até 7% do consumo de energia elétrica mensal, o ferro de passar é um dos eletrodomésticos mais “gastadores” de todos.
+            
+            Por isso, a dica de economia aqui é usar somente quando tiver um número considerável de peças para serem desamarrotadas.
+            
+            Outros cuidados são dosar a graduação certa para cada roupa, diminuindo o gasto energético, e se certificar de desligar o aparelho sempre que não estiver usando.
+        </p><hr>
+
+    </main>
+    <footer>
+        <a href="https://github.com/vilianoliveira" target="_blank">Site criado por Vilian Oliveira</a>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
