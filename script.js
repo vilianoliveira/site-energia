@@ -13,14 +13,14 @@ function calcular(){
     
 
     if (p == 0, te == 0, d == 0, ta == 0){
-        window.alert('[ERRO] Preencha todos os dados para prosseguir!')
+        window.alert('[ERRO] Preencha todos os dados para prosseguir!') 
     } else{
          var q = p * te / 1000 * d
 
          var v = q * ta
 
-        kwh.innerHTML += `<br><strong>${q}</strong><hr>(kwh)`
+        kwh.innerHTML += `<br><strong>${q}</strong>(kwh)`
         res.innerHTML += `<br><strong>${v}</strong>$`
         } 
-    }  
+    }
     
